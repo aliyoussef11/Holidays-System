@@ -18,7 +18,6 @@ Route::get('/', function () {
 //Routes for academic user
 Route::get('/academic', 'AcademicController@index');
 Route::post('/store-academic', 'AcademicController@store');
-Route::get('/request-a-holiday-academic', 'AcademicController@display');
 Route::get('/edit-a-holiday-academic', 'AcademicController@display_edit_page');
 Route::get('/edit-academic-holiday/{name}/{role}/{title}/{date}', 'AcademicController@show_edit_page_form');
 Route::post('/edit-academic-holiday/{name}/{role}/{title}/edit/academic-holiday/{date}', 'AcademicController@Edit_Holiday');
@@ -30,7 +29,6 @@ Route::get('/academic-statistics', 'AcademicController@Display_Statistics');
 //Routes for non-academic user
 Route::get('/non-academic', 'NonAcademicController@index');
 Route::post('/store-non-academic', 'NonAcademicController@store');
-Route::get('/request-a-holiday-non-academic', 'NonAcademicController@display');
 Route::get('/delete-a-holiday-non-academic', 'NonAcademicController@display_delete_page');
 Route::get('/delete-non-academic-holiday/{name}/{role}/{title}/{date}', 'NonAcademicController@Delete_Holiday');
 Route::get('/edit-a-holiday-non-academic', 'NonAcademicController@display_edit_page');
@@ -62,6 +60,7 @@ Route::get('/admin/update-non-academic-holidays', 'AdminController@Update_Non_Ac
 Route::post('/admin/update-managed-non-academic-conditions', 'AdminController@Update_Managed_Holidays_Conditions_Non_Academic');
 Route::get('/accept-edit-request/{name}/{role}/{title}/{previousDate}/{newDate}', 'AdminController@accept_edit_request');
 Route::get('/decline-edit-request/{name}/{role}/{title}/{previousDate}/{newDate}', 'AdminController@decline_edit_request');
+Route::get('/Contact-Us', 'AdminController@Contact_Us');
 
 Auth::routes();
 

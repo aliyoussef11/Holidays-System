@@ -146,10 +146,6 @@ class AcademicController extends Controller
         'Remaining_holidays_in_November'=>$Remaining_holidays_in_November, 'Remaining_holidays_in_December'=>$Remaining_holidays_in_December]);
     }
 
-    public function display(){
-        return view('academic.request-holiday');
-    }
-
     public function store(Request $request)
     {
         $all_requests = DB::table('requests')->where('name', '=', Auth::User()->name)->get();

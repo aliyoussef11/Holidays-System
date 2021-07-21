@@ -24,7 +24,7 @@
       <li class="active"><a href="#">Admin Page</a></li>
       <li><a href="/show-requests">Notification <span class="dot"><span style="visibility: hidden;">.</span>
       <span style="color: black;"><?php echo $requests_number; ?></span> </a></li>
-      <li><a href="#">Page 2</a></li>
+      <li><a href="/Contact-Us">Contact Us</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php echo Auth::User()->name;?></a></li>

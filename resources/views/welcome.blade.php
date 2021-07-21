@@ -68,21 +68,21 @@
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
-                    @if (Auth::check())
+                    <!-- @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
-                    @else
+                    @else -->
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
-                    @endif
+                    <!-- @endif -->
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
+            <div class="content">  
+                 <div class="title m-b-md">
                     Holidays System
-                </div>
-
-            </div>
+                </div> 
+                <img src="/img/Leave.jpg" alt="Leave Image" width=40% height=40%>
+            </div> 
         </div>
     </body>
 </html>

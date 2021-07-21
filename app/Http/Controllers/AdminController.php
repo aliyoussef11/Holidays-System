@@ -28,6 +28,18 @@ class AdminController extends Controller
         return view('admin.index' , ['requests_number'=>$requests_number]);
     }
 
+    public function Contact_Us(){
+        $all_requests = DB::table('requests')->get();
+        $count = $all_requests->count();
+
+        $all_edit_requests = DB::table('edit-holidays-requests')->get();
+        $count2 = $all_edit_requests->count();
+
+        $requests_number = $count + $count2;
+        
+        return view('admin.Contact-Us' , ['requests_number'=>$requests_number]);
+    }
+
     public function display_requests()
     {   
         $all_requests = DB::table('requests')->get();
