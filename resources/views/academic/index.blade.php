@@ -7,6 +7,7 @@
     	margin: 20px;
         position: relative;
     }
+    
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -59,7 +60,7 @@
       <li class="active"><a href="/academic">Academic Page</a></li>
     </ul>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="/academic-statistics">Statistics</a></li>
+      <li><a href="/academic-statistics">Statistics</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php echo Auth::User()->name;?></a></li>
@@ -156,6 +157,12 @@ Your Holiday on <?php echo $one_notification->date;?> <?php echo $one_notificati
                 Request A Holiday
                 </div>
                 <div class="panel-body">
+                <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/academic">Home Page</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Add Holiday</li>
+                </ol>
+                </nav>
                 <form method="POST" action="/store-academic">
 
                 {{ csrf_field() }}

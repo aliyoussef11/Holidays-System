@@ -48,7 +48,7 @@
       <a class="navbar-brand" href="#">Holidays System</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="/academic">Academic Page</a></li>
+      <li><a href="/academic">Academic Page</a></li>
     </ul>
     <ul class="nav navbar-nav">
       <li class="active"><a href="/academic-statistics">Statistics</a></li>

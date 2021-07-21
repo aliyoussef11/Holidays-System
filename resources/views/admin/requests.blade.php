@@ -73,7 +73,6 @@ if($requests->count() >0){
       <th>Details</th>
       <th>Date</th>
       <th></th>
-      <th></th>
       </tr>
       </thead>
                 
@@ -94,8 +93,8 @@ if($requests->count() >0){
       <td><?php echo $OneRequest -> title?> </td>
       <td><?php echo $OneRequest -> details?> </td>
       <td><?php echo $OneRequest -> date?> </td>
-      <td><a href="<?php echo "/accept-request/".$OneRequest->name."/".$OneRequest->role."/".$OneRequest->title."/".$OneRequest->date ?>" onclick="confirm ('Are you sure you accept this Holiday?')" class="btn btn-success">Accept</a></td>
-      <td><a href="<?php echo "/decline-request/".$OneRequest->name."/".$OneRequest->role."/".$OneRequest->title."/".$OneRequest->date ?>" onclick="confirm ('Are you sure you reject this Holiday?')" class="btn btn-danger">Decline</a></td>
+      <td><a href="<?php echo "/accept-request/".$OneRequest->name."/".$OneRequest->role."/".$OneRequest->title."/".$OneRequest->date ?>" onclick="confirm ('Are you sure you accept this Holiday?')" class="btn btn-success">Accept</a>
+      <a href="<?php echo "/decline-request/".$OneRequest->name."/".$OneRequest->role."/".$OneRequest->title."/".$OneRequest->date ?>" onclick="confirm ('Are you sure you reject this Holiday?')" class="btn btn-danger">Decline</a></td>
       </tr>
 
       <?php

@@ -1,3 +1,34 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@aliyoussef11 
+aliyoussef11
+/
+Holidays-System
+Private
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Settings
+Holidays-System/resources/views/admin/manage-non-academic-holidays.blade.php
+@aliyoussef11
+aliyoussef11 Add project files.
+Latest commit 67c49ba yesterday
+ History
+ 1 contributor
+228 lines (222 sloc)  6.39 KB
+  
 @extends('design.bootstrap-head')
 
 <head>
@@ -226,3 +257,16 @@
 </div>
 </div>
 </div>
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete{"mode":"full","isActive":false}

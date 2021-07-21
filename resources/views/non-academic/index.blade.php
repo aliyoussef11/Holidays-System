@@ -149,7 +149,12 @@ Your Holiday on <?php echo $one_notification->date;?> <?php echo $one_notificati
                 Request A Holiday
                 </div>
                 <div class="panel-body">
-                <h2>Task: Add Data</h2>
+                <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/non-academic">Home Page</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Add Holiday</li>
+                </ol>
+                </nav>
                 <form method="POST" action="/store-non-academic">
 
                 {{ csrf_field() }}

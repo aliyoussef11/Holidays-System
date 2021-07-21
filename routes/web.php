@@ -61,6 +61,7 @@ Route::post('/admin/update-managed-non-academic-conditions', 'AdminController@Up
 Route::get('/accept-edit-request/{name}/{role}/{title}/{previousDate}/{newDate}', 'AdminController@accept_edit_request');
 Route::get('/decline-edit-request/{name}/{role}/{title}/{previousDate}/{newDate}', 'AdminController@decline_edit_request');
 Route::get('/Contact-Us', 'AdminController@Contact_Us');
+Route::post('/admin-add-user', 'AdminController@AddUser');
 
 Auth::routes();
 

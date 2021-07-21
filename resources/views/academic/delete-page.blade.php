@@ -43,6 +43,12 @@
 </nav>
 
 <div class="container">
+<nav aria-label="breadcrumb" style="width:30%; margin-left:210px;">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/academic">Home Page</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Delete Holidays</li>
+                </ol>
+                </nav>
 
 @if (\Session::has('not-deleted'))
 <div class="alert alert-danger">

@@ -21,7 +21,7 @@
       <a class="navbar-brand" href="#">Holidays System</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="#">Admin Page</a></li>
+      <li><a href="/admin">Admin Page</a></li>
       <li><a href="/show-requests">Notification <span class="dot"><span style="visibility: hidden;">.</span>
       <span style="color: black;"><?php echo $requests_number; ?></span> </a></li>
       <li class="active"><a href="/Contact-Us">Contact Us</a></li>

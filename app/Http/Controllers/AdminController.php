@@ -28,6 +28,16 @@ class AdminController extends Controller
         return view('admin.index' , ['requests_number'=>$requests_number]);
     }
 
+    public function AddUser(Request $request){
+        User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'role' => $request['role'],
+            'password' => bcrypt($request['password']),
+        ]);
+        return redirect()->guest('/admin')->with('Edited', 'User Added Successfully!');
+    }
+
     public function Contact_Us(){
         $all_requests = DB::table('requests')->get();
         $count = $all_requests->count();
@@ -85,11 +95,7 @@ class AdminController extends Controller
 
         $details = [
             'title' => 'Mail from Holidays System Responsible',
-            'body' => 'Your Holiday on '.$date." is accepted because you are ".$title ,
-            'name' => $name,
-            'role' => $role,
-            'title' => $title,
-            'date' => $date
+            'body' => 'Your Holiday on '.$date." is accepted because you are ".$title
         ];
 
         Mail::to($email)->send(new SendMail($details));
