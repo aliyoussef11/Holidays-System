@@ -10,9 +10,52 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
     <!-- Styles -->
     <style>
+    #div1 {
+        float: left;
+        margin-left: 270px;
+    }
+
+    #div1 {
+        width: 96px;
+        box-sizing: content-box;
+        height: 48px;
+        background: #eee;
+        border-color: gray;
+        border-style: solid;
+        border-width: 2px 2px 50px 2px;
+        border-radius: 100%;
+        position: relative;
+    }
+
+    #div1:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: #eee;
+        border: 18px solid gray;
+        border-radius: 100%;
+        width: 12px;
+        height: 12px;
+        box-sizing: content-box;
+    }
+
+    #div1:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: gray;
+        border: 18px solid #eee;
+        border-radius: 100%;
+        width: 12px;
+        height: 12px;
+        box-sizing: content-box;
+    }
+
     html,
     body {
         background-color: white;
@@ -35,11 +78,6 @@
 
     .position-ref {
         position: relative;
-    }
-
-    .top-center {
-        position: absolute;
-        top: 18px;
     }
 
     .top-right {
@@ -72,12 +110,17 @@
         text-transform: uppercase;
     }
 
+    a:hover {
+        background-color: #eaeae1;
+    }
+
     .m-b-md {
         margin-bottom: 30px;
     }
 
-    a:hover {
-        background-color: #eaeae1;
+    .top-center {
+        position: absolute;
+        top: 18px;
     }
     </style>
 </head>
@@ -104,12 +147,18 @@
         </div>
 
         <div class="content">
-            <div class="title m-b-md">
-                Holidays System
-            </div>
-            <img src="/img/Leave.jpg" alt="Leave Image" width=40% height=40%>
+
+            <div id="div1"></div><br><br><br><br><br><br><br><br>
+            <p style="font-family:Arial, Helvetica, sans-serif"><b>Our Mission :</b></p><br>
+            <p style="font-family:Arial, Helvetica, sans-serif"><i>Using this system, instructors can apply for leave
+                    online.<br>
+                    the admin also can adjust various leave categories (academic- non-academic) and adjust <br>
+                    the leave policy to the university. This process also allows instructors to request holidays <br>
+                    according to the previous holidays, and the admin can review and approve holiday requests.</i></p>
+
+            <br /><br /><br /><br /><br />
+            <div style="font-family:Arial, Helvetica, sans-serif"><i>© 2021 Ali Youssef. All rights reserved</i></div>
         </div>
-    </div>
 </body>
 
 </html>

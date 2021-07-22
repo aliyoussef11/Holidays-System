@@ -26,6 +26,9 @@ class NonAcademicController extends Controller
 
         //Get Yearly Condition For Non academic user
         $yearly_condition = Condition::Where('role', '=', 'Non-Academic')->pluck('yearly');
+
+        if ($yearly_condition->count() != 0) {
+
         $Remaining_holidays_per_year = $yearly_condition[0] - $count_Holidays;
 
         //Get January Condition For Non academic user
@@ -123,6 +126,23 @@ class NonAcademicController extends Controller
         ->whereMonth('date', '=', 12)->get();
         $count_december_Holidays = $Holidays_Of_december->count();
         $Remaining_holidays_in_December = $december_condition[0] - $count_december_Holidays;
+
+    }
+    else{
+        $Remaining_holidays_per_year = 0;
+        $Remaining_holidays_in_January = 0;
+        $Remaining_holidays_in_February= 0;
+        $Remaining_holidays_in_March= 0;
+        $Remaining_holidays_in_April= 0;
+        $Remaining_holidays_in_May= 0;
+        $Remaining_holidays_in_June= 0;
+        $Remaining_holidays_in_July= 0;
+        $Remaining_holidays_in_August= 0;
+        $Remaining_holidays_in_September= 0;
+        $Remaining_holidays_in_October= 0;
+        $Remaining_holidays_in_November= 0;
+        $Remaining_holidays_in_December= 0;
+    }
         
         foreach($holidays as $row){
             $enddate = $row->date." 24:00:00";

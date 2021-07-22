@@ -10,7 +10,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
     <!-- Styles -->
     <style>
     html,
@@ -35,11 +35,6 @@
 
     .position-ref {
         position: relative;
-    }
-
-    .top-center {
-        position: absolute;
-        top: 18px;
     }
 
     .top-right {
@@ -72,12 +67,17 @@
         text-transform: uppercase;
     }
 
+    a:hover {
+        background-color: #eaeae1;
+    }
+
     .m-b-md {
         margin-bottom: 30px;
     }
 
-    a:hover {
-        background-color: #eaeae1;
+    .top-center {
+        position: absolute;
+        top: 18px;
     }
     </style>
 </head>
@@ -104,10 +104,13 @@
         </div>
 
         <div class="content">
-            <div class="title m-b-md">
-                Holidays System
+            <div style="text-align:center;">
+                <img src="/img/Contact-Us.jpg" alt="Contact Us" width=40% height=40%><br>
+                <a class="mailto" href="mailto:asy085@usal.edu.lb" style="color:black">
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i><b> : Our Mail</b></p>
+                </a>
+                <p style="color:black;"><i class="fa fa-phone" aria-hidden="true"></i><b> : 70082977</b></p>
             </div>
-            <img src="/img/Leave.jpg" alt="Leave Image" width=40% height=40%>
         </div>
     </div>
 </body>

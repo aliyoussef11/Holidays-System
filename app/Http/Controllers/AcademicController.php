@@ -27,104 +27,121 @@ class AcademicController extends Controller
 
         //Get Yearly Condition For academic user
         $yearly_condition = Condition::Where('role', '=', 'Academic')->pluck('yearly');
-        $Remaining_holidays_per_year = $yearly_condition[0] - $count_Holidays;
 
-        //Get January Condition For academic user
-        $january_condition = Condition::Where('role', '=', 'Academic')->pluck('january');
+        if ($yearly_condition->count() != 0) {
+            $Remaining_holidays_per_year = $yearly_condition[0] - $count_Holidays;
 
-        $Holidays_Of_January = DB::table('holidays')->where('name', '=', Auth::User()->name)
+            //Get January Condition For academic user
+            $january_condition = Condition::Where('role', '=', 'Academic')->pluck('january');
+
+            $Holidays_Of_January = DB::table('holidays')->where('name', '=', Auth::User()->name)
         ->whereMonth('date', '=', 1)->get();
-        $count_January_Holidays = $Holidays_Of_January->count();
-        $Remaining_holidays_in_January = $january_condition[0] - $count_January_Holidays; 
+            $count_January_Holidays = $Holidays_Of_January->count();
+            $Remaining_holidays_in_January = $january_condition[0] - $count_January_Holidays;
 
-        //Get February Condition For academic user
-        $february_condition = Condition::Where('role', '=', 'Academic')->pluck('february');
+            //Get February Condition For academic user
+            $february_condition = Condition::Where('role', '=', 'Academic')->pluck('february');
 
-        $Holidays_Of_february = DB::table('holidays')->where('name', '=', Auth::User()->name)
+            $Holidays_Of_february = DB::table('holidays')->where('name', '=', Auth::User()->name)
         ->whereMonth('date', '=', 2)->get();
-        $count_february_Holidays = $Holidays_Of_february->count();
-        $Remaining_holidays_in_February = $february_condition[0] - $count_february_Holidays; 
+            $count_february_Holidays = $Holidays_Of_february->count();
+            $Remaining_holidays_in_February = $february_condition[0] - $count_february_Holidays;
 
-        //Get March Condition For academic user
-        $march_condition = Condition::Where('role', '=', 'Academic')->pluck('march');
+            //Get March Condition For academic user
+            $march_condition = Condition::Where('role', '=', 'Academic')->pluck('march');
 
-        $Holidays_Of_march = DB::table('holidays')->where('name', '=', Auth::User()->name)
+            $Holidays_Of_march = DB::table('holidays')->where('name', '=', Auth::User()->name)
         ->whereMonth('date', '=', 3)->get();
-        $count_march_Holidays = $Holidays_Of_march->count();
-        $Remaining_holidays_in_March = $march_condition[0] - $count_march_Holidays;
+            $count_march_Holidays = $Holidays_Of_march->count();
+            $Remaining_holidays_in_March = $march_condition[0] - $count_march_Holidays;
 
-        //Get April Condition For academic user
-        $april_condition = Condition::Where('role', '=', 'Academic')->pluck('april');
+            //Get April Condition For academic user
+            $april_condition = Condition::Where('role', '=', 'Academic')->pluck('april');
 
-        $Holidays_Of_april = DB::table('holidays')->where('name', '=', Auth::User()->name)
+            $Holidays_Of_april = DB::table('holidays')->where('name', '=', Auth::User()->name)
         ->whereMonth('date', '=', 4)->get();
-        $count_april_Holidays = $Holidays_Of_april->count();
-        $Remaining_holidays_in_April = $april_condition[0] - $count_april_Holidays;
+            $count_april_Holidays = $Holidays_Of_april->count();
+            $Remaining_holidays_in_April = $april_condition[0] - $count_april_Holidays;
 
-        //Get May Condition For academic user
-        $may_condition = Condition::Where('role', '=', 'Academic')->pluck('may');
+            //Get May Condition For academic user
+            $may_condition = Condition::Where('role', '=', 'Academic')->pluck('may');
 
-        $Holidays_Of_may = DB::table('holidays')->where('name', '=', Auth::User()->name)
+            $Holidays_Of_may = DB::table('holidays')->where('name', '=', Auth::User()->name)
         ->whereMonth('date', '=', 5)->get();
-        $count_may_Holidays = $Holidays_Of_may->count();
-        $Remaining_holidays_in_May = $may_condition[0] - $count_may_Holidays;
+            $count_may_Holidays = $Holidays_Of_may->count();
+            $Remaining_holidays_in_May = $may_condition[0] - $count_may_Holidays;
 
-        //Get June Condition For academic user
-        $june_condition = Condition::Where('role', '=', 'Academic')->pluck('june');
+            //Get June Condition For academic user
+            $june_condition = Condition::Where('role', '=', 'Academic')->pluck('june');
 
-        $Holidays_Of_june = DB::table('holidays')->where('name', '=', Auth::User()->name)
+            $Holidays_Of_june = DB::table('holidays')->where('name', '=', Auth::User()->name)
         ->whereMonth('date', '=', 6)->get();
-        $count_june_Holidays = $Holidays_Of_june->count();
-        $Remaining_holidays_in_June = $june_condition[0] - $count_june_Holidays;
+            $count_june_Holidays = $Holidays_Of_june->count();
+            $Remaining_holidays_in_June = $june_condition[0] - $count_june_Holidays;
 
-        //Get July Condition For academic user
-        $july_condition = Condition::Where('role', '=', 'Academic')->pluck('july');
+            //Get July Condition For academic user
+            $july_condition = Condition::Where('role', '=', 'Academic')->pluck('july');
 
-        $Holidays_Of_july = DB::table('holidays')->where('name', '=', Auth::User()->name)
+            $Holidays_Of_july = DB::table('holidays')->where('name', '=', Auth::User()->name)
         ->whereMonth('date', '=', 7)->get();
-        $count_july_Holidays = $Holidays_Of_july->count();
-        $Remaining_holidays_in_July = $july_condition[0] - $count_july_Holidays;
+            $count_july_Holidays = $Holidays_Of_july->count();
+            $Remaining_holidays_in_July = $july_condition[0] - $count_july_Holidays;
 
-        //Get August Condition For academic user
-        $august_condition = Condition::Where('role', '=', 'Academic')->pluck('august');
+            //Get August Condition For academic user
+            $august_condition = Condition::Where('role', '=', 'Academic')->pluck('august');
 
-        $Holidays_Of_august = DB::table('holidays')->where('name', '=', Auth::User()->name)
+            $Holidays_Of_august = DB::table('holidays')->where('name', '=', Auth::User()->name)
         ->whereMonth('date', '=', 8)->get();
-        $count_august_Holidays = $Holidays_Of_august->count();
-        $Remaining_holidays_in_August = $august_condition[0] - $count_august_Holidays;
+            $count_august_Holidays = $Holidays_Of_august->count();
+            $Remaining_holidays_in_August = $august_condition[0] - $count_august_Holidays;
 
-        //Get September Condition For academic user
-        $september_condition = Condition::Where('role', '=', 'Academic')->pluck('september');
+            //Get September Condition For academic user
+            $september_condition = Condition::Where('role', '=', 'Academic')->pluck('september');
 
-        $Holidays_Of_september = DB::table('holidays')->where('name', '=', Auth::User()->name)
+            $Holidays_Of_september = DB::table('holidays')->where('name', '=', Auth::User()->name)
         ->whereMonth('date', '=', 9)->get();
-        $count_september_Holidays = $Holidays_Of_september->count();
-        $Remaining_holidays_in_September = $september_condition[0] - $count_september_Holidays;
+            $count_september_Holidays = $Holidays_Of_september->count();
+            $Remaining_holidays_in_September = $september_condition[0] - $count_september_Holidays;
 
-        //Get October Condition For academic user
-        $october_condition = Condition::Where('role', '=', 'Academic')->pluck('october');
+            //Get October Condition For academic user
+            $october_condition = Condition::Where('role', '=', 'Academic')->pluck('october');
 
-        $Holidays_Of_october = DB::table('holidays')->where('name', '=', Auth::User()->name)
+            $Holidays_Of_october = DB::table('holidays')->where('name', '=', Auth::User()->name)
         ->whereMonth('date', '=', 10)->get();
-        $count_october_Holidays = $Holidays_Of_october->count();
-        $Remaining_holidays_in_October = $october_condition[0] - $count_october_Holidays;
+            $count_october_Holidays = $Holidays_Of_october->count();
+            $Remaining_holidays_in_October = $october_condition[0] - $count_october_Holidays;
 
-        //Get November Condition For academic user
-        $november_condition = Condition::Where('role', '=', 'Academic')->pluck('november');
+            //Get November Condition For academic user
+            $november_condition = Condition::Where('role', '=', 'Academic')->pluck('november');
 
-        $Holidays_Of_november = DB::table('holidays')->where('name', '=', Auth::User()->name)
+            $Holidays_Of_november = DB::table('holidays')->where('name', '=', Auth::User()->name)
         ->whereMonth('date', '=', 11)->get();
-        $count_november_Holidays = $Holidays_Of_november->count();
-        $Remaining_holidays_in_November = $november_condition[0] - $count_november_Holidays;
+            $count_november_Holidays = $Holidays_Of_november->count();
+            $Remaining_holidays_in_November = $november_condition[0] - $count_november_Holidays;
 
-        //Get December Condition For academic user
-        $december_condition = Condition::Where('role', '=', 'Academic')->pluck('december');
+            //Get December Condition For academic user
+            $december_condition = Condition::Where('role', '=', 'Academic')->pluck('december');
 
-        $Holidays_Of_december = DB::table('holidays')->where('name', '=', Auth::User()->name)
+            $Holidays_Of_december = DB::table('holidays')->where('name', '=', Auth::User()->name)
         ->whereMonth('date', '=', 12)->get();
-        $count_december_Holidays = $Holidays_Of_december->count();
-        $Remaining_holidays_in_December = $december_condition[0] - $count_december_Holidays;
-
+            $count_december_Holidays = $Holidays_Of_december->count();
+            $Remaining_holidays_in_December = $december_condition[0] - $count_december_Holidays;
+        }
+        else{
+            $Remaining_holidays_per_year = 0;
+            $Remaining_holidays_in_January = 0;
+            $Remaining_holidays_in_February= 0;
+            $Remaining_holidays_in_March= 0;
+            $Remaining_holidays_in_April= 0;
+            $Remaining_holidays_in_May= 0;
+            $Remaining_holidays_in_June= 0;
+            $Remaining_holidays_in_July= 0;
+            $Remaining_holidays_in_August= 0;
+            $Remaining_holidays_in_September= 0;
+            $Remaining_holidays_in_October= 0;
+            $Remaining_holidays_in_November= 0;
+            $Remaining_holidays_in_December= 0;
+        }
 
         foreach($holidays as $row){
             $enddate = $row->date." 24:00:00";

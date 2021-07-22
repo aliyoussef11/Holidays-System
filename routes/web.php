@@ -60,7 +60,15 @@ Route::get('/admin/update-non-academic-holidays', 'AdminController@Update_Non_Ac
 Route::post('/admin/update-managed-non-academic-conditions', 'AdminController@Update_Managed_Holidays_Conditions_Non_Academic');
 Route::get('/accept-edit-request/{name}/{role}/{title}/{previousDate}/{newDate}', 'AdminController@accept_edit_request');
 Route::get('/decline-edit-request/{name}/{role}/{title}/{previousDate}/{newDate}', 'AdminController@decline_edit_request');
-Route::get('/Contact-Us', 'AdminController@Contact_Us');
+
+Route::get('/About-Us' , function () {
+    return view('About-Us');
+});
+Route::get('/Contact-Us' , function () {
+    return view('Contact-Us');
+});
+
+
 Route::post('/admin-add-user', 'AdminController@AddUser');
 
 Auth::routes();
