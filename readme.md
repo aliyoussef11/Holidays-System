@@ -1,4 +1,3 @@
-**Holidays System**
 Welcome to the Holidays System repository! This project is built using the Laravel framework and provides a convenient solution for managing holidays within an organization. It allows administrators to log in and manage the number of holidays for each month in the year, while users can register, request holidays, and view them on a calendar. The system also enables administrators to accept or reject holiday requests, and provides users with statistics through pie charts showcasing remaining and taken days.
 
 **Features:**
